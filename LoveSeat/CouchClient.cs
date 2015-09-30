@@ -8,7 +8,7 @@ namespace LoveSeat
 {
     // type of authentication used in request to CouchDB
     public enum AuthenticationType
-    { Basic, Cookie };
+    { AdminParty, Basic, Cookie };
 
     /// <summary>
     /// Used as the starting point for any communication with CouchDB
@@ -22,7 +22,7 @@ namespace LoveSeat
         /// This is only intended for use if your CouchDb is in Admin Party
         /// </summary>
         public CouchClient()
-            : this("localhost", 5984, null, null, false, AuthenticationType.Basic)
+            : this("localhost", 5984, null, null, false, AuthenticationType.AdminParty)
         {
         }
 
